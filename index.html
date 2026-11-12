@@ -1174,6 +1174,16 @@
   @media(max-width:480px){.wa-float span{display:none}.wa-float{padding:14px}.pages-grid{grid-template-columns:1fr}}
   .cat-organic{background:linear-gradient(145deg,#1a2a10,#4a6b2a,#0a1500)}
   .cat-frag2{background:linear-gradient(145deg,#2a0a1a,#6b1a4a,#10000a)}
+  .shop-bar{display:flex;flex-direction:column;align-items:center;gap:20px;margin-bottom:40px}
+  .shop-search{width:100%;max-width:460px;padding:14px 20px;background:rgba(13,61,68,.6);border:1px solid rgba(201,162,39,.3);color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:17px;outline:none}
+  .shop-search:focus{border-color:var(--gold)}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .chip{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:10px 18px;background:transparent;border:1px solid rgba(201,162,39,.35);color:var(--gold);cursor:pointer;transition:all .3s}
+  .chip:hover,.chip.on{background:var(--gold);color:var(--teal-deep)}
+  .shop-count{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:2px;color:var(--text-muted);text-transform:uppercase}
+  .shop-more{text-align:center;margin-top:40px}
+  .product-image{height:140px!important;font-size:56px!important}
+  .product-name{min-height:48px}
 </style>
 </head>
 <body>
@@ -1187,7 +1197,7 @@
   <ul class="nav-links">
     <li><a href="#categories">Shop</a></li>
     <li><a href="#brands">Brands</a></li>
-    <li><a href="#featured">New Arrivals</a></li>
+    <li><a href="shop.html">Products</a></li>
     <li><a href="#testimonials">Why Us</a></li>
     <li><a href="#our-pages">Our Pages</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -1211,7 +1221,7 @@
     </p>
     <p style="font-family:'Noto Serif Bengali',serif;font-size:18px;color:var(--gold-light);margin:-22px 0 36px">আপনার সৌন্দর্যের যত্নে শ্রেষ্ঠ পছন্দ</p>
     <div class="hero-actions">
-      <a href="#featured" class="btn-primary"><span>Shop Collection</span></a>
+      <a href="shop.html" class="btn-primary"><span>Shop Collection</span></a>
       <a href="#categories" class="btn-secondary">
         Browse Categories
         <svg width="16" height="10" viewBox="0 0 16 10" fill="none">
@@ -1307,153 +1317,7 @@
       <div class="category-arrow">→</div>
     </div>
   </div>
-</section>
-
-<!-- FEATURED PRODUCTS -->
-<section class="section featured-section" id="featured">
-  <div class="section-header reveal">
-    <div class="section-eyebrow">Handpicked</div>
-    <h2 class="section-title">Featured <span class="gold-text">Products</span></h2>
-  </div>
-  <div class="products-grid">
-
-    <div class="product-card reveal">
-      <div class="product-image">
-        <div class="product-image-bg p1-bg"></div>
-        <span class="product-emoji">🧴</span>
-        <div class="product-badge">Best Seller</div>
-        <div class="product-wishlist">♡</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Dove</div>
-        <div class="product-name">Deep Moisture Body Wash</div>
-        <div class="product-footer">
-          <div><span class="product-price">৳ 650</span><span class="product-price-old">৳ 780</span></div>
-          <button class="btn-cart" onclick="addToCart(this)">Order Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal">
-      <div class="product-image">
-        <div class="product-image-bg p2-bg"></div>
-        <span class="product-emoji">💋</span>
-        <div class="product-badge">New</div>
-        <div class="product-wishlist">♡</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">CeraVe</div>
-        <div class="product-name">Moisturizing Cream</div>
-        <div class="product-footer">
-          <div><span class="product-price">৳ 2,200</span></div>
-          <button class="btn-cart" onclick="addToCart(this)">Order Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal">
-      <div class="product-image">
-        <div class="product-image-bg p3-bg"></div>
-        <span class="product-emoji">🌟</span>
-        <div class="product-badge">Top Rated</div>
-        <div class="product-wishlist">♡</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Aveeno</div>
-        <div class="product-name">Daily Moisturizing Lotion</div>
-        <div class="product-footer">
-          <div><span class="product-price">৳ 1,450</span><span class="product-price-old">৳ 1,700</span></div>
-          <button class="btn-cart" onclick="addToCart(this)">Order Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal">
-      <div class="product-image">
-        <div class="product-image-bg p4-bg"></div>
-        <span class="product-emoji">✨</span>
-        <div class="product-badge">Limited</div>
-        <div class="product-wishlist">♡</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Neutrogena</div>
-        <div class="product-name">Hydro Boost Water Gel</div>
-        <div class="product-footer">
-          <div><span class="product-price">৳ 1,800</span></div>
-          <button class="btn-cart" onclick="addToCart(this)">Order Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal">
-      <div class="product-image">
-        <div class="product-image-bg p5-bg"></div>
-        <span class="product-emoji">🌹</span>
-        <div class="product-badge">Sale</div>
-        <div class="product-wishlist">♡</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">OGX</div>
-        <div class="product-name">Biotin &amp; Collagen Shampoo</div>
-        <div class="product-footer">
-          <div><span class="product-price">৳ 1,600</span><span class="product-price-old">৳ 1,900</span></div>
-          <button class="btn-cart" onclick="addToCart(this)">Order Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal">
-      <div class="product-image">
-        <div class="product-image-bg p6-bg"></div>
-        <span class="product-emoji">💧</span>
-        <div class="product-badge">Trending</div>
-        <div class="product-wishlist">♡</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Simple</div>
-        <div class="product-name">Refreshing Facial Wash</div>
-        <div class="product-footer">
-          <div><span class="product-price">৳ 750</span></div>
-          <button class="btn-cart" onclick="addToCart(this)">Order Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal">
-      <div class="product-image">
-        <div class="product-image-bg p7-bg"></div>
-        <span class="product-emoji">👄</span>
-        <div class="product-badge">New</div>
-        <div class="product-wishlist">♡</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">The Body Shop</div>
-        <div class="product-name">Body Butter</div>
-        <div class="product-footer">
-          <div><span class="product-price">৳ 1,950</span></div>
-          <button class="btn-cart" onclick="addToCart(this)">Order Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal">
-      <div class="product-image">
-        <div class="product-image-bg p8-bg"></div>
-        <span class="product-emoji">🌿</span>
-        <div class="product-badge">Organic</div>
-        <div class="product-wishlist">♡</div>
-      </div>
-      <div class="product-info">
-        <div class="product-brand">L'Oréal Paris</div>
-        <div class="product-name">Hydra Fresh Anti-Ox Face Wash</div>
-        <div class="product-footer">
-          <div><span class="product-price">৳ 1,100</span><span class="product-price-old">৳ 1,300</span></div>
-          <button class="btn-cart" onclick="addToCart(this)">Order Now</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  <div style="text-align:center;margin-top:48px"><a href="shop.html" class="btn-primary"><span>View All Products</span></a></div>
 </section>
 
 <!-- PROMO BANNER -->
@@ -1512,12 +1376,12 @@
     <div>
       <div class="footer-col-title">Shop</div>
       <ul class="footer-links">
-        <li><a href="#">Skincare</a></li>
-        <li><a href="#">Makeup</a></li>
-        <li><a href="#">Fragrance</a></li>
-        <li><a href="#">Hair Care</a></li>
-        <li><a href="#">Gift Sets</a></li>
-        <li><a href="#">New Arrivals</a></li>
+        <li><a href="shop.html?cat=Skincare">Skincare</a></li>
+        <li><a href="shop.html?cat=Makeup">Makeup</a></li>
+        <li><a href="shop.html?cat=Fragrance">Fragrance</a></li>
+        <li><a href="shop.html?cat=Hair%20Care">Hair Care</a></li>
+        <li><a href="shop.html">Gift Sets</a></li>
+        <li><a href="shop.html">Products</a></li>
       </ul>
     </div>
     <div>
@@ -1562,6 +1426,9 @@ function addToCart(btn){
   document.querySelectorAll('.product-card.reveal').forEach((card, i) => {
     card.style.transitionDelay = `${i * 60}ms`;
   });
+
+  // Category cards open the shop page
+  document.querySelectorAll('.category-card').forEach(c=>c.addEventListener('click',()=>{location.href='shop.html?cat='+encodeURIComponent(c.querySelector('.category-name').textContent)}));
 </script>
 <a class="wa-float" href="https://wa.me/966573325959?text=Hello%20Marline%20Glow!" target="_blank" rel="noopener" aria-label="Order on WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.3-.5.1-1.1.1-3.6-.9-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.300 1.700 2.100 1.200 1 2.200 1.400 2.500 1.500.3.1.5.1.6-.1l.9-1.100c.2-.3.4-.2.6-.1l1.900.9c.3.1.5.2.5.3.1.2.1.8-.1 1.500z"/></svg><span>Order on WhatsApp</span></a>
 </body>
