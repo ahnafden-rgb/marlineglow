@@ -1,6 +1,6 @@
 // Marline Glow – saves website orders into your Google Sheet and emails you.
 // 1) Put your email below. 2) Deploy as Web app (Execute as: Me, Access: Anyone).
-const NOTIFY_EMAIL = 'marlineglow@gmail.com';
+const NOTIFY_EMAIL = 'PUT-YOUR-EMAIL-HERE@gmail.com';
 const TAB = 'Website Orders';
 
 function doPost(e) {
