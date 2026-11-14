@@ -21,7 +21,7 @@ g.addEventListener('change',e=>{if(!e.target.classList.contains('sz'))return;con
 g.addEventListener('click',e=>{if(!e.target.classList.contains('add'))return;const c=e.target.closest('.pc'),p=L[+c.dataset.i],s=c.querySelector('.sz'),v=p.v[s?+s.value:0];MG.add({brand:p.b,name:p.n,size:v[0]&&p.n.indexOf(v[0])<0?v[0]:'',price:v[1],qty:1})});
 if(!P.featured){
  document.getElementById('chips').addEventListener('click',e=>{const t=e.target;if(t.dataset.c!==undefined)cat=t.dataset.c;else if(t.dataset.b!==undefined)brand=t.dataset.b;else return;sh=24;render()});
- document.getElementById('sort').onchange=e=>{sort=e.target.value;render()};
+ document.getElementById('sort').addEventListener('click',e=>{const b=e.target.closest('[data-s]');if(!b)return;sort=b.dataset.s;document.querySelectorAll('#sort .chip').forEach(c=>c.classList.toggle('on',c===b));render()});
  document.getElementById('more').onclick=()=>{sh+=24;render()};
 }
 render();

@@ -1,6 +1,6 @@
 /* Marline Glow – cart + menu. EDIT THE SETTINGS BELOW. */
 (function(){
-const CFG=window.MG_CFG={WA:'966573325959',PAY_NUMBER:'01813575452',DHAKA_FEE:70,OUTSIDE_FEE:130,SCRIPT_URL:''};
+const CFG=window.MG_CFG={WA:'966573325959',PAY_NUMBER:'01813575452',DHAKA_FEE:70,OUTSIDE_FEE:130,SCRIPT_URL:'https://script.google.com/macros/s/AKfycbxGg7CuYUTZ00tXW5ggFx6fOD-zbLCJH981osYLZp2-LRoVk363eBebfJ5BZKP0x80M/exec'};
 const K='mg_cart',$=id=>document.getElementById(id);
 const get=()=>{try{return JSON.parse(localStorage.getItem(K))||[]}catch(e){return[]}};
 const put=c=>{try{localStorage.setItem(K,JSON.stringify(c))}catch(e){}};
