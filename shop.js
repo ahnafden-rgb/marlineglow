@@ -1,11 +1,11 @@
 (function(){
 const P=window.PAGE||{},EM={'Skincare':'✨','Hair Care':'💆‍♀️','Body Care':'🧴','Organic':'🌿','Fragrance':'🌹','Wellness':'🍃'};
 const U=new URLSearchParams(location.search),g=document.getElementById('grid'),esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-const money=n=>n?MG.fmt(n):'Ask for price',L=PRODUCTS.map((p,i)=>({...p,i}));
+const money=n=>n?MG.fmt(n):'Ask for price',L=PRODUCTS.map((p,k)=>({...p,img:p.i,i:k}));
 let cat=P.cat||U.get('cat')||'All',brand=U.get('brand')||'',q=(U.get('q')||'').toLowerCase().trim(),sort='',sh=24;
 const minp=p=>Math.min(...p.v.map(v=>v[1]||1e9));
 function card(p){const m=p.v.length>1,one=p.v[0][0];
- return `<article class="pc" data-i="${p.i}"><div class="pi">${EM[p.c]||'✨'}${p.bs?'<span class="bd">Best Seller</span>':''}</div><div class="pb"><div class="pbr">${esc(p.b)}</div><h3>${esc(p.n)}</h3>${m?`<select class="sz" aria-label="Size">${p.v.map((v,k)=>`<option value="${k}">${v[0]}</option>`).join('')}</select>`:(one&&p.n.indexOf(one)<0?`<div class="sz1">${one}</div>`:'')}<div class="pf"><span class="pp${p.v[0][1]?'':' ask'}">${money(p.v[0][1])}</span><button class="add">Add to cart</button></div></div></article>`}
+ return `<article class="pc" data-i="${p.i}"><a class="pi" href="p-${p.s}.html" aria-label="${esc(p.b+' '+p.n)}">${p.img?`<img src="${p.img}" alt="${esc(p.b+' '+p.n)}" loading="lazy">`:(EM[p.c]||'✨')}${p.bs?'<span class="bd">Best Seller</span>':''}</a><div class="pb"><div class="pbr">${esc(p.b)}</div><h3><a href="p-${p.s}.html">${esc(p.n)}</a></h3>${m?`<select class="sz" aria-label="Size">${p.v.map((v,k)=>`<option value="${k}">${v[0]}</option>`).join('')}</select>`:(one&&p.n.indexOf(one)<0?`<div class="sz1">${one}</div>`:'')}<div class="pf"><span class="pp${p.v[0][1]?'':' ask'}">${money(p.v[0][1])}</span><button class="add">Add to cart</button></div></div></article>`}
 function list(){let r=L.filter(p=>(cat==='All'||p.c===cat)&&(!brand||p.b===brand)&&(!q||(p.b+' '+p.n).toLowerCase().includes(q)));
  if(sort)r.sort((a,b)=>sort==='lo'?minp(a)-minp(b):minp(b)-minp(a));return r}
 function render(){
